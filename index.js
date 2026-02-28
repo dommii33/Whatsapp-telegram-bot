@@ -8,6 +8,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
+console.log("TOKEN:", TELEGRAM_TOKEN);
+console.log("CHAT_ID:", TELEGRAM_CHAT_ID);
+
 app.post("/webhook", async (req, res) => {
   const from = req.body.From;
   const body = req.body.Body;
